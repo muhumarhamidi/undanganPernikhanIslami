@@ -1,0 +1,497 @@
+/* style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    /* Text Colors */
+    --text-color-primary: #5B5B5F;
+    --text-color-secondary: #FFFFFF;
+    
+    /* Background Colors */
+    --bg-color-main: #EFEDE8;
+    --bg-color-accent: #BEC198;
+    --bg-color-card: #F9F9F9;
+}
+
+/* ================================================================= */
+/* PAGE-LEVEL CORNER DECORATIONS                                     */
+/* ================================================================= */
+.c_page1-rectangle2,
+.c_page1-rectangle3 {
+    position: fixed;
+    z-index: -1; /* Pastikan di belakang semua konten */
+    opacity: 0.8;
+    pointer-events: none; /* Penting: agar tidak menghalangi klik */
+    width: auto;
+    max-width: 100vw;
+    height: auto;
+    margin: 0;
+    display: block;
+    overflow: hidden;
+}
+
+.c_page1-rectangle2 {
+    top: 0;
+    left: 0;
+    max-width: 300px; /* Base for desktop */
+}
+
+.c_page1-rectangle3 {
+    bottom: 0;
+    right: 0;
+    max-width: 300px; /* Base for desktop */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--bg-color-main);
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+    overflow-y: auto; /* Menggunakan auto agar bisa scroll jika konten melebihi viewport */
+}
+
+/* ================================================================= */
+/* MAIN CONTAINER (Menampung seluruh konten utama halaman)           */
+/* ================================================================= */
+.main-container {
+    position: relative;
+    width: 100%;
+    max-width: 580px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    box-sizing: border-box; /* Pastikan padding dihitung dalam lebar */
+    padding: 0 15px; /* Tambahkan sedikit padding horizontal pada container utama */
+}
+
+/* ================================================================= */
+/* JUDUL COVER SECTION (Berisi background, bunga, teks, & tombol)    */
+/* ================================================================= */
+.judul_cover {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px; /* Base height for larger screens */
+    box-sizing: border-box; /* Penting: agar padding dan border dihitung dalam width/height */
+}
+
+.background_text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 200px 200px 0 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.flower_top {
+    position: absolute;
+    top: -8%;
+    right: -20%;
+    max-width: 265px;
+    height: auto;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.flower_bottom {
+    position: absolute;
+    bottom: -10%;
+    left: -30%;
+    max-width: 275px;
+    height: auto;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* ================================================================= */
+/* TEXT ISI JUDUL SECTION (Berisi semua teks utama & tombol)         */
+/* ================================================================= */
+.text_isi_judul {
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px;
+    max-width: 284px; /* Base max-width */
+    width: 100%; /* Agar bisa mengecil sesuai parent */
+}
+
+.wedding_of_text {
+    color: var(--text-color-primary);
+    font-size: 24px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.names_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.groom_name,
+.bride_name {
+    color: var(--text-color-primary);
+    font-size: 100px;
+    font-family: "Fleur De Leah", serif;
+    font-weight: 400;
+    line-height: 1;
+    margin: 0;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.line {
+    width: 100px;
+    height: 0.5px;
+    background-color: var(--text-color-primary);
+    border: none;
+    margin: 0 10px;
+}
+
+.and_text {
+    color: var(--text-color-primary);
+    font-size: 40px;
+    font-family: "Fleur De Leah", serif;
+    font-weight: 400;
+    margin: 0;
+}
+
+.open_invitation_button {
+    display: inline-flex;
+    padding: 10px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    color: var(--text-color-primary);
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+    max-width: 350px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--bg-color-accent);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+    z-index: 4;
+}
+
+.open_invitation_button:hover {
+    background-color: var(--bg-color-main);
+    color: var(--text-color-primary);
+}
+
+/* ================================================================= */
+/* "KEPADA YTH" TEXT                                                 */
+/* ================================================================= */
+p.text_keterangan {
+    color: var(--text-color-primary); /* Menggunakan --text-color-primary dari :root */
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 5px;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* ================================================================= */
+/* NAME BOX                                                          */
+/* ================================================================= */
+.name_background_wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.name_background_image {
+    width: 100%;
+    height: auto;
+    max-width: 600px; /* Keep this high so it scales down */
+    display: block;
+    border-radius: 20px;
+}
+
+.name_overlay_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0 15px;
+}
+
+.nama-tamu {
+    color: var(--text-color-primary);
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+}
+
+/* ================================================================= */
+/* MEDIA QUERIES FOR MOBILE AND TABLET (max-width: 768px)            */
+/* --- Perbaikan utama untuk halaman cover ada di sini ---           */
+/* ================================================================= */
+@media (max-width: 768px) {
+    /* Penyesuaian untuk dekorasi sudut halaman */
+    .c_page1-rectangle2 {
+        max-width: clamp(150px, 40vw, 250px); /* Memungkinkan lebih kecil di HP sangat kecil */
+    }
+    .c_page1-rectangle3 {
+        max-width: clamp(130px, 35vw, 230px); /* Memungkinkan lebih kecil di HP sangat kecil */
+    }
+
+    .main-container {
+        margin-top: 15px; /* Sedikit kurang margin atas */
+        margin-bottom: 15px;
+        padding: 0 10px; /* Sedikit padding di sisi untuk HP */
+    }
+
+    .judul_cover {
+        height: 80vw; /* Tinggi relatif terhadap viewport width agar proporsional */
+        max-height: 400px; /* Batas maksimum tinggi agar tidak terlalu besar di tablet */
+        max-width: clamp(280px, 80vw, 400px); /* Lebar fleksibel */
+        min-height: 300px; /* Jangan sampai terlalu kecil */
+    }
+
+    .background_text {
+        border-radius: 40vw 40vw 0 0; /* Border radius relatif terhadap lebar */
+    }
+
+    .flower_top {
+        top: -5%;
+        right: -4%;
+        max-width: clamp(120px, 35vw, 190px); /* Ukuran bunga yang lebih adaptif */
+    }
+
+    .flower_bottom {
+        bottom: -8%;
+        left: -13%; /* Geser ke kiri sedikit */
+        max-width: clamp(100px, 35vw, 190px); /* Ukuran bunga yang lebih adaptif */
+    }
+
+    .text_isi_judul {
+        padding: 10px; /* Kurangi padding sedikit */
+        max-width: clamp(200px, 70vw, 284px); /* Lebar lebih adaptif */
+    }
+
+    /* Penyesuaian Ukuran Font di Mobile/Tablet */
+    .wedding_of_text {
+        font-size: clamp(16px, 4vw, 20px);
+        margin-bottom: 15px;
+    }
+
+    .names_section {
+        margin-bottom: 15px;
+    }
+
+    .groom_name,
+    .bride_name {
+        font-size: clamp(55px, 15vw, 70px); /* Font size adaptif */
+    }
+
+    .and_text {
+        font-size: clamp(25px, 8vw, 30px); /* Font size adaptif */
+    }
+
+    .separator .line {
+        width: clamp(40px, 12vw, 60px); /* Panjang garis adaptif */
+        margin: 0 5px;
+    }
+
+    .open_invitation_button {
+        font-size: clamp(16px, 4vw, 18px); /* Font size adaptif */
+        padding: 10px 25px; /* Padding sedikit disesuaikan */
+        max-width: clamp(200px, 60vw, 280px); /* Lebar tombol adaptif */
+    }
+
+    /* Penyesuaian untuk "Kepada Yth" & Nama Tamu */
+    p.text_keterangan {
+        font-size: clamp(16px, 4vw, 18px);
+        margin-top: 30px; /* Kurangi margin atas */
+        max-width: clamp(280px, 80vw, 350px);
+    }
+
+    .name_background_wrapper {
+        max-width: clamp(250px, 75vw, 320px);
+        margin-bottom: 15px;
+    }
+
+    .name_overlay_text {
+        padding: 0 10px;
+    }
+
+    .nama-tamu {
+        font-size: clamp(16px, 4vw, 18px);
+    }
+
+    /* --- MEDIA QUERIES UNTUK SECOND SECTION (DETAIL ACARA) --- */
+    /* Ini adalah bagian dari CSS yang Anda berikan sebelumnya untuk halaman kedua */
+    .event-details-wrapper {
+        padding: 20px 10px;
+    }
+
+    .event-content-container {
+        padding: 0 10px;
+    }
+
+    .event-intro-block,
+    .ceremony-reception-grid,
+    .closing-message-wrapper {
+        margin-bottom: 3vh;
+    }
+
+    .ceremony-reception-grid {
+        flex-direction: column; /* Tumpuk kolom di mobile */
+        gap: 30px; /* Jarak antar kartu acara */
+        align-content: center;
+    }
+
+    .event-date-card {
+        padding: 15px 30px;
+    }
+
+    .ceremony-details,
+    .reception-details {
+        padding-top: 20px;
+        padding-bottom: 40px;
+        min-height: 150px;
+    }
+
+    .event-top-decoration-flower {
+        max-width: 200px;
+        top: -40px;
+    }
+
+    .ceremony-reception-info-box {
+        padding-top: 50px;
+        padding-bottom: 10px;
+        min-height: 100px;
+    }
+
+    /* Penyesuaian ukuran teks untuk mobile (SECOND SECTION) */
+    .event-date-intro {
+        font-size: clamp(16px, 3.8vw, 22px);
+    }
+    .event-date {
+        font-size: clamp(15px, 2.5vw, 24px);
+    }
+    .event-type-title {
+        font-size: clamp(18px, 2vw, 20px);
+    }
+    .event-time {
+        font-size: clamp(16px, 2vw, 18px);
+    }
+    .event-location {
+        font-size: clamp(14px, 2vw, 16px);
+    }
+    .closing-message {
+        font-size: clamp(14px, 3vw, 20px);
+    }
+
+    /* Styling spesifik untuk Gift Section di mobile */
+    .gift-section-wrapper {
+        padding: 10px;
+    }
+
+    .gift-intro-text {
+        font-size: clamp(14px, 3.5vw, 20px);
+        line-height: 1.5;
+    }
+
+    .gift-option-grid {
+        flex-direction: column;
+        gap: 20px;
+        align-content: center;
+    }
+
+    .gift-card {
+        padding: 10px 20px;
+        max-width: 350px;
+    }
+
+    .gift-detail-label,
+    .gift-detail-value {
+        font-size: clamp(14px, 3.5vw, 18px);
+        line-height: 1.4;
+    }
+
+    .gift-closing-message {
+        font-size: clamp(14px, 3.5vw, 20px);
+    }
+
+    /* Styling untuk dekorasi di dalam kartu (mobile) */
+    .gift-card-decoration {
+        width: clamp(70px, 18vw, 100px);
+    }
+
+    .gift-card-icon {
+        width: clamp(20px, 6vw, 35px);
+    }
+
+    /* Posisi spesifik untuk bunga dekorasi Bank Transfer Card (mobile) */
+    .bank-transfer-card .gift-card-decoration.bottom-left {
+        bottom: -15px; /* Sesuaikan lagi jika perlu */
+        right: -15px; /* Sesuaikan lagi jika perlu */
+    }
+
+    /* Posisi spesifik untuk ikon Bank Transfer Card (mobile) */
+    .bank-transfer-card .gift-card-icon.top-right {
+        top: -5px; /* Sesuaikan lagi jika perlu */
+        left: -5px; /* Sesuaikan lagi jika perlu */
+    }
+
+    /* Posisi spesifik untuk bunga dekorasi Hadiah Kado Card (mobile) */
+    .physical-gift-card .gift-card-decoration.top-right {
+        top: -15px; /* Sesuaikan lagi jika perlu */
+        left: -15px; /* Sesuaikan lagi jika perlu */
+    }
+
+    /* Posisi spesifik untuk ikon Hadiah Kado Card (mobile) */
+    .physical-gift-card .gift-card-icon.bottom-left {
+        bottom: -5px; /* Sesuaikan lagi jika perlu */
+        right: -10px; /* Sesuaikan lagi jika perlu */
+    }
+}

@@ -1,0 +1,1420 @@
+/* General body styling for full height */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    min-height: 400vh;
+    /* Meningkatkan min-height agar ada ruang untuk 4 halaman */
+    overflow-x: hidden;
+}
+
+/* Styles for the first "page" */
+.main-page-wrapper {
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Styles for the second "page" that appears on scroll */
+.second-section {
+    background-color: #EFEDE8;
+    /* Warna latar halaman kedua */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    box-sizing: border-box;
+    color: #333;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* --- START: STYLES UNTUK BUNGA HIASAN (DIKEDUA SECTION) --- */
+/* (Aturan ini akan berlaku untuk .main-page-wrapper, .second-section, .third-section, .fourth-section) */
+.flower-top-left,
+.flower-top-right,
+.flower-bottom-left,
+.flower-bottom-right {
+    position: absolute;
+    z-index: 0;
+    /* Pastikan bunga di belakang konten utama */
+    pointer-events: none;
+    opacity: 0.7;
+    height: auto;
+}
+
+.flower-top-left {
+    top: 0;
+    left: 0;
+    width: clamp(150px, 20vw, 250px);
+    transform: translate(-10%, -10%);
+}
+
+.flower-top-right {
+    top: 0;
+    right: 0;
+    width: clamp(150px, 20vw, 250px);
+    transform: translate(10%, -10%);
+}
+
+.flower-bottom-left {
+    bottom: 0;
+    left: 0;
+    width: clamp(150px, 20vw, 250px);
+    transform: translate(-10%, 10%);
+}
+
+.flower-bottom-right {
+    bottom: 0;
+    right: 0;
+    width: clamp(150px, 20vw, 250px);
+    transform: translate(10%, 10%);
+}
+
+/* --- END: STYLES UNTUK BUNGA HIASAN --- */
+
+
+/* --- START: STYLES UNTUK KONTEN FIRST PAGE (MAIN-PAGE-WRAPPER) --- */
+.wedding-intro-section {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+    padding: 1.5vh 1vw;
+    box-sizing: border-box;
+    flex-grow: 1;
+    flex-shrink: 1;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.wedding-details-card {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 1;
+}
+
+.wedding-title-wrapper {
+    margin-bottom: 0.5vh;
+}
+
+.wedding-title {
+    color: #5b5b5f;
+    font-size: clamp(45px, 6.5vw, 65px);
+    font-family: "Fleur De Leah", serif;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: none;
+    margin: 0;
+}
+
+.greeting-text-wrapper {
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 0.5vh;
+    flex-shrink: 1;
+}
+
+.greeting-text {
+    color: #5b5b5f;
+    font-size: clamp(28px, 3.8vw, 36px);
+    font-family: "Fleur De Leah", serif;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    text-transform: none;
+    margin-bottom: 1vh;
+}
+
+.intro-paragraph-wrapper,
+.closing-paragraph-wrapper {
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 0.5vh;
+    flex-shrink: 1;
+}
+
+.intro-paragraph,
+.closing-paragraph {
+    color: #5b5b5f;
+    font-size: clamp(14px, 2vw, 20px);
+    font-style: normal;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    text-transform: none;
+    margin: 0;
+}
+
+.groom-bride-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    max-width: 900px;
+    margin: 1.5vh 0;
+    flex-wrap: wrap;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.groom-details,
+.bride-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 1vh 1.5vw;
+    max-width: 300px;
+    flex-shrink: 1;
+}
+
+.groom-image-wrapper,
+.bride-image-wrapper {
+    width: clamp(100px, 14vw, 200px);
+    height: clamp(100px, 14vw, 200px);
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-shrink: 1;
+}
+
+.groom-image,
+.bride-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.groom-name-wrapper,
+.bride-name-wrapper {
+    margin-bottom: 0.8vh;
+}
+
+.groom-name,
+.bride-name {
+    color: #5b5b5f;
+    font-size: clamp(24px, 3.5vw, 36px);
+    font-family: "Fleur De Leah", serif;
+    font-weight: 400;
+    line-height: 1.2;
+    text-transform: none;
+    margin: 0;
+}
+
+.groom-parents-wrapper,
+.bride-parents-wrapper {
+    max-width: 280px;
+}
+
+.groom-parents,
+.bride-parents {
+    color: #5b5b5f;
+    font-size: clamp(14px, 1.6vw, 18px);
+    font-style: italic;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    line-height: 1.3;
+    text-transform: none;
+    margin: 0;
+}
+
+.and-symbol {
+    font-family: 'Fleur De Leah', serif;
+    font-size: clamp(40px, 5vw, 70px);
+    color: #5b5b5f;
+    margin: 0 1.5vw;
+    align-self: center;
+    padding-top: 2vh;
+    flex-shrink: 1;
+}
+
+/* --- END: STYLES UNTUK KONTEN FIRST PAGE --- */
+
+
+/* --- START: STYLES UNTUK KONTEN SECOND SECTION (DETAIL ACARA) --- */
+
+.event-details-wrapper {
+    width: 100%;
+    max-width: 1440px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: transparent;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.event-details-bg-image {
+    display: none;
+}
+
+.event-content-container {
+    width: 100%;
+    max-width: 1082px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Event Intro Block (Detail Acara & Tanggal) */
+.event-intro-block {
+    width: 100%;
+    max-width: 562px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4vh;
+}
+
+.event-title-wrapper {
+    width: 100%;
+    margin-bottom: 2vh;
+}
+
+.event-title {
+    color: #5b5b5f;
+    font-size: clamp(45px, 6vw, 70px);
+    font-family: "Fleur De Leah", serif;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: none;
+    margin: 0;
+}
+
+.event-date-block {
+    width: 100%;
+    max-width: 562px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.event-date-intro {
+    color: #5b5b5f;
+    font-size: clamp(18px, 2.5vw, 24px);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    text-transform: none;
+    margin-top: 0;
+    margin-bottom: 2vh;
+    text-align: center;
+}
+
+.event-date-card {
+    gap: 10px;
+    width: 100%;
+    display: flex;
+    padding: 20px 60px;
+    position: relative;
+    max-width: 373px;
+    box-sizing: border-box;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+    background-color: #bec198;
+    margin-bottom: 4vh;
+}
+
+.event-date {
+    color: #5b5b5f;
+    font-size: clamp(18px, 2.5vw, 24px);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    text-transform: none;
+    margin: 0;
+    text-align: center;
+}
+
+
+/* Ceremony and Reception Grid */
+.ceremony-reception-grid {
+    width: 100%;
+    max-width: 1082px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 4vh;
+}
+
+.ceremony-details,
+.reception-details {
+    width: 100%;
+    max-width: 467px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 100px 100px 0 0;
+    overflow: visible;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 400px;
+    background-color: white;
+    /* Diatur menjadi putih */
+    background-image: none;
+    padding-bottom: 50px;
+    padding-top: 80px;
+}
+
+/* Hiasan Bunga di bagian atas ceremony/reception details */
+.event-top-decoration-flower {
+    position: absolute;
+    top: -80px;
+    /* Dinaikkan lebih jauh */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    z-index: 2;
+    pointer-events: none;
+}
+
+
+.ceremony-reception-info-box {
+    width: 100%;
+    max-width: 467px;
+    /* Ini juga membatasi lebar info box */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Pusatkan konten vertikal */
+    align-items: center;
+    /* Pusatkan konten horizontal */
+    box-sizing: border-box;
+    position: relative;
+    z-index: 3;
+
+    background-image: url('./Image/Baground Text Wedding.svg');
+    background-size: 100% 100%;
+    /* Ubah menjadi 100% lebar dan 100% tinggi untuk mengisi penuh */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    /* Pastikan tidak ada warna di sini */
+    border-radius: 20px;
+
+    padding: 5% 20px;
+    height: auto;
+}
+
+/* Penyesuaian untuk teks di dalam info-box agar tidak terlalu mepet dengan background SVG */
+.event-type-wrapper,
+.event-time-location-group {
+    padding-left: 10%;
+    padding-right: 10%;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.event-type-wrapper {
+    width: 100%;
+    margin-bottom: 1vh;
+}
+
+.event-type-title {
+    color: #000;
+    font-size: clamp(20px, 2.8vw, 24px);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    text-transform: none;
+    margin: 0;
+}
+
+.event-time-location-group {
+    width: 100%;
+    max-width: 332px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.event-time {
+    color: #000;
+    font-size: clamp(18px, 2.5vw, 24px);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    text-transform: none;
+    margin-top: 0;
+    margin-bottom: 1vh;
+}
+
+.event-location {
+    color: #000;
+    font-size: clamp(16px, 2.2vw, 24px);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    text-transform: none;
+    margin: 0;
+    max-width: 332px;
+}
+
+/* Icons for events */
+.event-icon {
+    width: clamp(40px, 5vw, 63.5px);
+    height: auto;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    /* Posisikan di paling bawah */
+    z-index: 4;
+}
+
+.icon-akad-1,
+.icon-resepsi-1 {
+    left: 0;
+    transform: translateX(20%);
+}
+
+.icon-akad-2,
+.icon-resepsi-2 {
+    right: 0;
+    transform: translateX(-20%);
+}
+
+/* Map thumbnails (assuming these are replaced by top decoration flowers in HTML) */
+.event-map-thumbnail {
+    display: none;
+}
+
+
+/* Closing message */
+.closing-message-wrapper {
+    width: 100%;
+    max-width: 1029px;
+    margin-top: 4vh;
+    text-align: center;
+}
+
+.closing-message {
+    color: #000;
+    font-size: clamp(18px, 2.5vw, 24px);
+    font-style: normal;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    text-transform: none;
+    margin: 0;
+}
+
+/* --- END: STYLES UNTUK KONTEN SECOND SECTION --- */
+
+/* --- START: STYLES UNTUK HALAMAN KETIGA & KEEMPAT --- */
+.third-section,
+.five-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    /* Untuk memotong bunga di luar */
+    color: #333;
+    /* Warna teks default */
+}
+
+.third-section {
+    background-color: white;
+    /* Latar belakang putih untuk halaman ketiga */
+}
+
+.fourth-section {
+    background-color: #EFEDE8;
+    /* Latar belakang warna halaman kedua */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.five-section {
+    background-color: white;
+}
+
+
+
+/* --- START: STYLING UNTUK THIRD SECTION (GIFT/APPRECIATION) --- */
+.gift-section-wrapper {
+    width: 100%;
+    max-width: 1124px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* Memastikan semua teks di dalam wrapper ini terpusat */
+    position: relative;
+    /* Penting untuk posisi bunga/ikon */
+    padding: 20px;
+}
+
+.gift-title-block {
+    width: 100%;
+    margin-bottom: 2vh;
+}
+
+.gift-title {
+    color: #5b5b5f;
+    /* Menyamakan font dan ukuran dengan judul halaman 1 dan 2 */
+    font-size: clamp(45px, 6vw, 70px);
+    /* Seperti .event-title */
+    font-family: "Fleur De Leah", serif;
+    /* Menggunakan font yang sama */
+    font-weight: 400;
+    line-height: normal;
+    text-transform: none;
+    margin: 0;
+}
+
+.gift-intro-text-wrapper {
+    width: 100%;
+    max-width: 979px;
+    margin-bottom: 4vh;
+}
+
+.gift-intro-text {
+    color: #5b5b5f;
+    font-size: clamp(18px, 2.5vw, 24px);
+    font-family: "Montserrat", sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0 auto;
+    text-align: center;
+    /* Tambahkan ini */
+    /* Jika elemen ini adalah div atau p, properti di atas sudah cukup.
+       Jika parent-nya adalah flex container, pastikan align-items: center; */
+}
+
+.gift-option-grid {
+    width: 100%;
+    max-width: 1124px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 4vh;
+}
+
+.gift-card {
+    width: 100%;
+    max-width: 462px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 15px 40px;
+    border-radius: 20px;
+    background-color: #efede8;
+    position: relative;
+    /* Penting agar bunga/ikon di dalamnya bisa diposisikan absolut */
+    overflow: visible;
+    /* Penting untuk membiarkan gambar keluar dari batas kartu */
+    text-align: center;
+}
+
+.gift-card-header {
+    width: 100%;
+    max-width: 382px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 2vh;
+}
+
+.gift-card-title {
+    color: #5b5b5f;
+    font-size: clamp(18px, 2.5vw, 24px);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: none;
+    margin: 0;
+}
+
+.gift-card-divider,
+.gift-detail-divider {
+    width: 100%;
+    height: 1px;
+    max-width: 382px;
+    background-color: #a0a0a0;
+    display: block;
+    margin: 0;
+}
+
+.gift-detail-item {
+    width: 100%;
+    max-width: 382px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 2vh;
+    text-align: center;
+}
+
+.gift-detail-label-group {
+    width: 100%;
+    max-width: 382px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.gift-detail-label {
+    color: #5b5b5f;
+    font-size: clamp(16px, 2.2vw, 20px);
+    font-family: "Montserrat", sans-serif;
+    /* Pastikan Montserrat */
+    font-weight: 600;
+    line-height: normal;
+    text-transform: none;
+    margin: 0;
+}
+
+.gift-detail-value {
+    color: #5b5b5f;
+    font-size: clamp(16px, 2.2vw, 20px);
+    font-family: "Montserrat", sans-serif;
+    /* Pastikan Montserrat */
+    font-weight: 400;
+    line-height: normal;
+    text-transform: none;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.gift-detail-item .gift-detail-value:last-child {
+    max-width: 382px;
+}
+
+.gift-closing-message-wrapper {
+    width: 100%;
+    max-width: 675px;
+    margin-top: 4vh;
+}
+
+.gift-closing-message {
+    color: #5b5b5f;
+    font-size: clamp(18px, 2.5vw, 24px);
+    font-style: italic;
+    font-family: "Montserrat", sans-serif;
+    /* Pastikan Montserrat */
+    font-weight: 400;
+    line-height: 1.4;
+    text-transform: none;
+    margin: 0;
+    text-align: center;
+}
+
+
+.gift-card-decoration,
+.gift-card-icon {
+    position: absolute;
+    height: auto;
+    pointer-events: none;
+    opacity: 0.9;
+}
+
+.gift-card-decoration {
+    width: clamp(80px, 15vw, 130px);
+    /* Ukuran yang lebih sesuai dengan Page 3.png */
+    z-index: 1;
+    /* Di bawah teks, di atas background kartu */
+}
+
+.gift-card-icon {
+    width: clamp(30px, 6vw, 45px);
+    /* Ukuran yang lebih sesuai dengan Page 3.png */
+    z-index: 3;
+    /* Di atas dekorasi bunga dan teks */
+}
+
+/* Posisi spesifik untuk bunga dekorasi Bank Transfer Card */
+.bank-transfer-card .gift-card-decoration.bottom-left {
+    bottom: -30px;
+    /* Dorong lebih jauh keluar dari bawah */
+    right: -30px;
+    /* Dorong lebih jauh keluar dari kiri */
+    transform: rotate(0deg);
+}
+
+/* Posisi spesifik untuk ikon Bank Transfer Card */
+.bank-transfer-card .gift-card-icon.top-right {
+    top: -10px;
+    /* Dorong lebih jauh keluar dari atas */
+    left: -20px;
+    /* Dorong lebih jauh keluar dari kanan */
+    transform: rotate(0deg);
+}
+
+/* Posisi spesifik untuk bunga dekorasi Hadiah Kado Card */
+.physical-gift-card .gift-card-decoration.top-right {
+    top: -30px;
+    /* Dorong lebih jauh keluar dari atas */
+    left: -30px;
+    /* Dorong lebih jauh keluar dari kanan */
+    transform: rotate(0deg);
+}
+
+/* Posisi spesifik untuk ikon Hadiah Kado Card */
+.physical-gift-card .gift-card-icon.bottom-left {
+    bottom: -15px;
+    /* Dorong lebih jauh keluar dari bawah */
+    right: -18px;
+    /* Dorong lebih jauh keluar dari kiri */
+    transform: rotate(0deg);
+}
+
+
+/* --- END: STYLING UNTUK THIRD SECTION --- */
+
+/* --- Fourth Section --*/
+/* Styling for the "Do'a dan Ucapan" heading */
+
+.fourth-section-content {
+    align-content: center;
+}
+
+.doa-ucapan {
+    color: #5b5b5f;
+    font-size: clamp(50px, 8vw, 70px);
+    font-family: "Fleur De Leah", serif;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: none;
+    text-align: center;
+
+}
+
+/* Styling for the form column */
+.form-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Space between form groups */
+}
+
+/* Styling for individual form groups */
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    /* Slightly bolder label */
+    font-size: clamp(18px, 1.5vw, 20px);
+    color: #5b5b5f;
+    font-style: normal;
+    font-family: "Montserrat", sans-serif;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #D1C4B8;
+    /* Soft border color */
+    box-sizing: border-box;
+    border-radius: 8px;
+    /* Slightly more rounded corners */
+    background-color: #F8F5F1;
+    color: #5b5b5f;
+    font-size: clamp(12px, 1vw, 18px);
+    font-style: normal;
+    font-family: "Montserrat", sans-serif;
+    /* Light background for inputs */
+}
+
+.form-group textarea {
+    min-height: 200px;
+    /* Increased minimum height for message area */
+    resize: vertical;
+    /* Allow vertical resizing */
+}
+
+/* Styling for radio button options */
+.radio-options {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow options to wrap on smaller screens */
+    gap: 25px;
+    /* Space between radio button labels */
+    margin-top: 5px;
+}
+
+.radio-options label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Increased space between radio button and text */
+    font-weight: normal;
+    font-size: clamp(16px, 2.5vw, 20px); 
+    /* Slightly larger text for radio options */
+    color: #4A4A4A;
+    /* Match label color for consistency */
+    cursor: pointer;
+}
+
+.radio-options input[type="radio"] {
+    -webkit-appearance: none;
+    /* Remove default styling for webkit browsers */
+    -moz-appearance: none;
+    /* Remove default styling for mozilla browsers */
+    appearance: none;
+    /* Remove default styling */
+    /* User's requested properties for the outer stroke/circle, adjusted for SVG-like size */
+    width: 28px;
+    /* Updated from 25px to match SVG viewBox width */
+    height: 28px;
+    /* Updated from 25px to match SVG viewBox height */
+    flex-shrink: 0;
+    /* Prevent shrinking on smaller screens */
+    aspect-ratio: 1/1;
+    /* Ensure it remains a perfect circle/square */
+
+    border: 1.5px solid #5B5B5F;
+    /* User's requested stroke-width and color */
+    border-radius: 50%;
+    /* Make it circular */
+    outline: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    /* Include padding/border in total size */
+    position: relative;
+    /* Needed for positioning the ::before pseudo-element */
+    display: flex;
+    /* Use flex to center the pseudo-element */
+    justify-content: center;
+    align-items: center;
+    /* No background-color here for the unchecked state, only the border defines it */
+}
+
+/* This is the inner filled circle when checked */
+.radio-options input[type="radio"]::before {
+    content: '';
+    display: block;
+    /* Make it a block element */
+    /* User's requested properties for the inner fill */
+    width: 15px;
+    /* Matches SVG inner circle diameter */
+    height: 15px;
+    /* Matches SVG inner circle diameter */
+    flex-shrink: 0;
+    /* Important for inner element in flex context */
+    background-color: #5B5B5F;
+    /* User's requested fill color */
+    border-radius: 50%;
+    transform: scale(0);
+    /* Start hidden/small */
+    transition: transform 0.2s ease-in-out;
+    /* Smooth transition for scale */
+}
+
+/* When checked, scale up the inner filled circle */
+.radio-options input[type="radio"]:checked::before {
+    transform: scale(1);
+    /* Show the inner filled circle */
+}
+
+/* Styling for the send button */
+.send-button {
+    /* New properties as requested by the user, and combined with existing */
+    display: inline-flex;
+    height: 40px;
+    padding: 10px;
+    /* Padding for the entire button, text inside will be centered */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* Gap between button content if multiple items */
+    border-radius: 20px;
+    background: #FFF;
+    /* White background */
+
+    /* Text styling as requested by the user */
+    color: #5B5B5F;
+    /* var(--Text, #5B5B5F) resolved to #5B5B5F */
+    font-family: 'Montserrat', sans-serif;
+    /* Use Montserrat */
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    /* Bold */
+    line-height: normal;
+    /* Default line height */
+    flex-shrink: 0;
+    /* Prevent shrinking if space is tight */
+
+    /* New size and width properties from user's snippet */
+    width: 100%;
+    /* Make it take full width of its parent */
+    max-width: 200px;
+    /* Limit its maximum width */
+    box-sizing: border-box;
+    /* Ensure padding is included in width */
+
+    /* Maintain some previous useful properties */
+    cursor: pointer;
+    align-self: center;
+    /* Center the button in its column */
+    margin-top: 25px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    /* Smooth transitions */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    border: none;
+    /* Remove any default button borders */
+}
+
+.send-button:hover {
+    background-color: #8c8c8c;
+    /* Slightly darker white on hover */
+    transform: translateY(-2px);
+    /* Slight lift effect */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    color: white;
+    /* More prominent shadow on hover */
+}
+
+.send-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+/* Styling for the bottom text */
+.bottom-text {
+    color: #5b5b5f;
+    font-size: clamp(18px, 2.5vw, 24px);
+    font-style: italic;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    text-transform: none;
+    padding-top: 20PX;
+    text-align: center;
+    ;
+}
+
+
+/* ================================================================= */
+/* MEDIA QUERIES FOR MOBILE AND TABLET (max-width: 768px)            */
+/* ================================================================= */
+@media (max-width: 768px) {
+    /* ... (Your existing media query CSS for other sections) ... */
+
+    /* --- FOURTH SECTION (Greetings and RSVP Form) Mobile Styles --- */
+    .greetings-section-wrapper {
+        padding: 15px;
+        gap: 30px;
+    }
+
+    .greetings-title-block .greetings-title {
+        font-size: clamp(40px, 10vw, 60px);
+        margin-bottom: 15px;
+    }
+
+    .guest-form-content-wrapper {
+        flex-direction: column;
+        /* Tumpuk kolom di mobile */
+        gap: 40px;
+        /* Jarak saat ditumpuk */
+        align-items: center;
+        /* Pusatkan saat ditumpuk */
+    }
+
+    .groom-bride-display-card {
+        min-height: clamp(300px, 70vw, 360px);
+        max-width: clamp(280px, 80vw, 350px);
+    }
+
+    .groom-bride-display-bg {
+        border-radius: 35vw 35vw 0 0;
+    }
+
+    .groom-bride-names-overlay {
+        padding: 15px;
+        max-width: clamp(200px, 60vw, 284px);
+    }
+
+    .groom-display-name,
+    .bride-display-name {
+        font-size: clamp(50px, 12vw, 70px);
+    }
+
+    .name-separator {
+        margin: 8px 0;
+    }
+
+    .separator-line {
+        width: clamp(40px, 10vw, 60px);
+        margin: 0 8px;
+    }
+
+    .separator-text {
+        font-size: clamp(25px, 6vw, 30px);
+    }
+
+    .flower-display-top {
+        top: -5%;
+        right: -10%;
+        max-width: clamp(100px, 25vw, 150px);
+    }
+
+    .flower-display-bottom {
+        bottom: -8%;
+        left: -15%;
+        max-width: clamp(100px, 25vw, 150px);
+    }
+
+    .guest-form-card {
+        padding: 30px 20px;
+        gap: 20px;
+        max-width: 400px;
+        /* Batasi lebar form di mobile */
+        min-width: unset;
+        /* Hapus min-width agar lebih fleksibel di mobile */
+    }
+
+    .input-field-wrapper {
+        height: 60px;
+    }
+
+    .input-field-wrapper.textarea-field {
+        height: 120px;
+    }
+
+    .guest-input,
+    .guest-textarea {
+        font-size: clamp(16px, 4vw, 20px);
+        padding: 15px;
+        /* Sesuaikan padding input untuk mobile */
+    }
+
+    .guest-input::placeholder,
+    .guest-textarea::placeholder {
+        font-size: clamp(16px, 4vw, 20px);
+    }
+
+    .attendance-label,
+    .radio-label {
+        font-size: clamp(16px, 4vw, 20px);
+    }
+
+    .radio-custom-indicator {
+        width: 25px;
+        height: 25px;
+    }
+
+    .radio-custom-indicator::after {
+        width: 14px;
+        height: 14px;
+    }
+
+    .submit-button {
+        padding: 8px 25px;
+        font-size: clamp(18px, 4.5vw, 22px);
+        max-width: 250px;
+    }
+
+    .greetings-closing-message-wrapper {
+        margin-top: 30px;
+        max-width: 90%;
+    }
+
+    .greetings-closing-message {
+        font-size: clamp(16px, 4vw, 20px);
+    }
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+
+    /* Adjustments for the wedding details page */
+    .groom-bride-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .and-symbol {
+        margin: 1.5vh 0;
+        padding-top: 0;
+    }
+
+    /* Penyesuaian bunga pada mobile (pojok halaman) */
+    .flower-top-left,
+    .flower-top-right,
+    .flower-bottom-left,
+    .flower-bottom-right {
+        height: auto;
+        width: clamp(100px, 30vw, 150px);
+    }
+
+    .flower-top-left {
+        top: 0;
+        left: 0;
+        transform: translate(-15%, -15%);
+    }
+
+    .flower-top-right {
+        top: 0;
+        right: 0;
+        transform: translate(15%, -15%);
+    }
+
+    .flower-bottom-left {
+        bottom: 0;
+        left: 0;
+        transform: translate(-15%, 15%);
+    }
+
+    .flower-bottom-right {
+        bottom: 0;
+        right: 0;
+        transform: translate(15%, 15%);
+    }
+
+
+    /* --- MEDIA QUERIES UNTUK SECOND SECTION (DETAIL ACARA) --- */
+    .event-details-wrapper {
+        padding: 20px 10px;
+    }
+
+    .event-content-container {
+        padding: 0 10px;
+    }
+
+    .event-intro-block,
+    .ceremony-reception-grid,
+    .closing-message-wrapper {
+        margin-bottom: 3vh;
+    }
+
+    .ceremony-reception-grid {
+        flex-direction: column;
+        /* Tumpuk kolom di mobile */
+        gap: 30px;
+        /* Jarak antar kartu acara */
+        align-content: center;
+    }
+
+    .event-date-card {
+        padding: 15px 30px;
+    }
+
+    .ceremony-details,
+    .reception-details {
+        padding-top: 20px;
+        padding-bottom: 40px;
+        min-height: 150px;
+    }
+
+    .event-top-decoration-flower {
+        max-width: 200px;
+        top: -40px;
+    }
+
+    .ceremony-reception-info-box {
+        padding-top: 50px;
+        padding-bottom: 10px;
+        min-height: 100px;
+    }
+
+    /* Penyesuaian ukuran teks untuk mobile (SECOND SECTION) */
+
+    .event-date-intro {
+        font-size: clamp(16px, 3.8vw, 22px);
+    }
+
+    .event-date {
+        font-size: clamp(15px, 2.5vw, 24px);
+    }
+
+    .event-type-title {
+        font-size: clamp(18px, 2vw, 20px);
+    }
+
+    .event-time {
+        font-size: clamp(16px, 2vw, 18px);
+    }
+
+    .event-location {
+        font-size: clamp(14px, 2vw, 16px);
+    }
+
+    .closing-message {
+        font-size: clamp(14px, 3vw, 20px);
+    }
+
+    /* Styling spesifik untuk Gift Section di mobile */
+    .gift-section-wrapper {
+        padding: 10px;
+    }
+
+
+    .gift-intro-text {
+        font-size: clamp(14px, 3.5vw, 20px);
+        line-height: 1.5;
+    }
+
+    .gift-option-grid {
+        flex-direction: column;
+        gap: 20px;
+        align-content: center;
+    }
+
+    .gift-card {
+        padding: 10px 20px;
+        max-width: 350px;
+    }
+
+
+    .gift-detail-label,
+    .gift-detail-value {
+        font-size: clamp(14px, 3.5vw, 18px);
+        line-height: 1.4;
+    }
+
+    .gift-closing-message {
+        font-size: clamp(14px, 3.5vw, 20px);
+    }
+
+    /* Styling untuk dekorasi di dalam kartu (mobile) */
+    .gift-card-decoration {
+        width: clamp(70px, 18vw, 100px);
+    }
+
+    .gift-card-icon {
+        width: clamp(20px, 6vw, 35px);
+    }
+
+    /* Posisi spesifik untuk bunga dekorasi Bank Transfer Card (mobile) */
+    .bank-transfer-card .gift-card-decoration.bottom-left {
+        bottom: -15px;
+        /* Sesuaikan lagi jika perlu */
+        right: -15px;
+        /* Sesuaikan lagi jika perlu */
+    }
+
+    /* Posisi spesifik untuk ikon Bank Transfer Card (mobile) */
+    .bank-transfer-card .gift-card-icon.top-right {
+        top: -5px;
+        /* Sesuaikan lagi jika perlu */
+        left: -5px;
+        /* Sesuaikan lagi jika perlu */
+    }
+
+    /* Posisi spesifik untuk bunga dekorasi Hadiah Kado Card (mobile) */
+    .physical-gift-card .gift-card-decoration.top-right {
+        top: -15px;
+        /* Sesuaikan lagi jika perlu */
+        left: -15px;
+        /* Sesuaikan lagi jika perlu */
+    }
+
+    /* Posisi spesifik untuk ikon Hadiah Kado Card (mobile) */
+    .physical-gift-card .gift-card-icon.bottom-left {
+        bottom: -5px;
+        /* Sesuaikan lagi jika perlu */
+        right: -10px;
+        /* Sesuaikan lagi jika perlu */
+    }
+
+    /* fourth section*/
+    .fourth-section-content {
+        grid-template-columns: 1fr;
+        /* Ensure single column for screens up to 768px */
+        padding: 20px;
+        width: 95%;
+    }
+
+    /* .doa-ucapan already uses clamp() */
+    /* .form-group label already uses clamp() */
+    /* .form-group input, .form-group textarea already use clamp() */
+    /* .bottom-text already uses clamp() */
+
+    .radio-options {
+        flex-direction: column;
+        /* Stack radio options vertically */
+        gap: 15px;
+    }
+
+    .send-button {
+        font-size: 1.0em;
+        /* Adjust font size for smaller screens */
+        padding: 8px 20px;
+        
+    }
+
+    .buttom-text {
+        font-size: clamp(16px, 2.5vw, 20px); 
+    }
+}

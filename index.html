@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <img src="./image/Bunga Atas cover.png" alt="page top left decoration" class="c_page1-rectangle2">
+    <img src="./image/Bunga Bawah cover.png" alt="page bottom right decoration" class="c_page1-rectangle3">
+
+    <div class="main-container">
+        <div class="judul_cover">
+            <img src="./image/Baground Text Wedding.svg" alt="background" class="background_text">
+            <img src="./image/Bunga Hiasan Atas TW.png" alt="flower decoration top" class="flower_top">
+            <img src="./image/Bunga Hiasan Bawah TW.png" alt="flower decoration bottom" class="flower_bottom">
+            <div class="text_isi_judul">
+                <p class="wedding_of_text">The Wedding Of</p>
+                <div class="names_section">
+                    <p class="groom_name">Wira</p>
+                    <div class="separator">
+                        <hr class="line">
+                        <p class="and_text">dan</p>
+                        <hr class="line">
+                    </div>
+                    <p class="bride_name">Lisa</p>
+                </div>
+                <button class="open_invitation_button" id="openInvitationBtn">Buka Undangan</button>
+            </div>
+        </div>
+
+        <div class="text_nama_tamu_section">
+            <p class="text_keterangan">Kepada Yth Bapak/Ibu/Saudara/I</p>
+            <div class="name_background_wrapper">
+                <img src="./image/Baground Nama Undangan Text.svg" alt="name background" class="name_background_image">
+                <div class="name_overlay_text">
+                    <p class="nama-tamu">Nama Tamu Undangan</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Gunakan DOMContentLoaded untuk memastikan DOM sudah siap
+        document.addEventListener('DOMContentLoaded', function() {
+            const openBtn = document.getElementById('openInvitationBtn');
+
+            // Cek apakah tombol ditemukan
+            if (openBtn) {
+                openBtn.addEventListener('click', function() {
+                    console.log('Tombol "Buka Undangan" diklik!'); // Untuk debugging
+                    window.location.href = 'second-page.html';
+                });
+            } else {
+                console.error('Elemen dengan ID "openInvitationBtn" tidak ditemukan.');
+            }
+        });
+    </script>
+</body>
+
+</html>
