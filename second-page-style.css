@@ -1414,7 +1414,7 @@ body {
         
     }
 
-    .buttom-text {
+    .bottom-text {
         font-size: clamp(14px, 3.5vw, 20px); 
     }
 }
